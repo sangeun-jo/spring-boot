@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServlet;
         )
 public class InitServlet extends HttpServlet {
     private String myParam = "";
-
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
         System.out.println("init call");

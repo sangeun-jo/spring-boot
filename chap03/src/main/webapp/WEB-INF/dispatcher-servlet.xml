@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:mvc="http://www.springframework.org/schema/mvc"
+        xsi:schemaLocation="http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="info.thecodinglive.controller" />
+
+    <!-- 디스패쳐가 View 이름 대면 View 찾아주는 녀석 -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/WEB-INF/views/" /> <!-- 뷰 역할을 하는 HTML, jsp 파일들의 경로-->
+        <property name="suffix" value=".jsp" /> <!-- 뷰 이름과 매칭되는 확장자 -->
+    </bean>
+
+    <!-- 컨트롤러가 요청을 처리하기 전, 후에 대한 로직을 추가하는 기능-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/"/>
+            <bean class="info.thecodinglive.interceptor.ExecuteTimeInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+</beans>

@@ -1,0 +1,54 @@
+buildscript{
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.akhikhl.gretty:gretty:+'
+    }
+}
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'application'
+
+apply plugin: 'org.akhikhl.gretty'
+
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+List springLib = [
+        "org.springframework:spring-core:4.1.6.RELEASE",
+        "org.springframework:spring-context:4.1.6.RELEASE",
+        "org.springframework:spring-webmvc:4.1.6.RELEASE",
+]
+
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    compile springLib
+    compile 'org.slf4j:slf4j-api:1.7.7'
+    testCompile 'junit:junit:4.12'
+}
+
+gretty{
+    httpPort = 8080
+    contextPath = '/'
+    servletContainer = 'jetty9'
+}
+
+
+def webappDir = "$rootDir/src/main/webapp"
+
+eclipse{
+    classpath{
+        downloadSources = true
+        defaultOutputDir = file("${buildDir}/classes/main")
+    }
+}
