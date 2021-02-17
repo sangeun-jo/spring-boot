@@ -1,0 +1,16 @@
+info/thecodinglive/model/Product.java
+ info.thecodinglive.model.Product
+info/thecodinglive/UIMain.java
+ info.thecodinglive.UIMain
+info/thecodinglive/controller/UIController.java
+ info.thecodinglive.controller.UIController
+info/thecodinglive/controller/HomeController.java
+ info.thecodinglive.controller.HomeController
+info/thecodinglive/service/InMemoryProductService.java
+ info.thecodinglive.service.InMemoryProductService
+info/thecodinglive/controller/ResourceAdvice.java
+ info.thecodinglive.controller.ResourceAdvice
+info/thecodinglive/controller/ExecuteTimeInterceptor.java
+ info.thecodinglive.controller.ExecuteTimeInterceptor
+info/thecodinglive/config/WebConfig.java
+ info.thecodinglive.config.WebConfig

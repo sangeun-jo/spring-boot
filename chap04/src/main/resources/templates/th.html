@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <!-- 에셋 어쩌구에서 로드될때, 캐시가 저장됨. 왜? 내가 추가한 리솔버는 캐시 추가하는 코드가 있으니까!! -->
+        <link rel="stylesheet" th:href="${versionResourceResolver.getForLookupPath('/assets/css/style.css')}" />
+        <title>thymeleaf</title>
+        <link rel="stylesheet" th:href="${versionResourceResolver.getForLookupPath('/assets/css/style.css')}" />
+    </head>
+    <body>
+        <p th:text="${message}"></p>
+    </body>
+</html>

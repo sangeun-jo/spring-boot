@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '1.5.8.RELEASE'
+}
+
+ext {
+    springBootVersion='1.5.8.RELEASE'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/resources'
+        }
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf' //템플릿 엔진의 일종
+    //템플릿이란? 붕어빵 틀. 데이터를 주면 페이지를 찍어냄.
+    compile 'org.springframework.boot:spring-boot-devtools'
+
+    // 페이지(html 파일 등)에서 버전 정보 명시 안해도 되게 해줌
+    compile group: 'org.webjars', name: 'webjars-locator', version: '0.32'
+
+    compile 'org.webjars:jquery:3.1.0'
+    compile 'org.webjars:bootstrap:3.3.1'
+    compile 'org.webjars:materializecss:0.96.0'
+
+    compile 'org.slf4j:slf4j-api:1.7.7'
+
+    testCompile 'junit:junit:4.12'
+}
