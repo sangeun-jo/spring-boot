@@ -1,0 +1,14 @@
+sej/springexample/model/Todo.java
+ sej.springexample.model.Todo
+sej/springexample/model/User.java
+ sej.springexample.model.User
+sej/springexample/config/SwaggerConfig.java
+ sej.springexample.config.SwaggerConfig
+sej/springexample/model/TodoResource.java
+ sej.springexample.model.TodoResource
+sej/springexample/controller/BasicController.java
+ sej.springexample.controller.BasicController
+sej/springexample/controller/UserController.java
+ sej.springexample.controller.UserController
+sej/springexample/RestApp.java
+ sej.springexample.RestApp
