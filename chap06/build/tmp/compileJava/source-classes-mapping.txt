@@ -1,0 +1,23 @@
+sej/springexample/model/UserEntity.java
+ sej.springexample.model.UserEntity
+sej/springexample/repository/UserRepository.java
+ sej.springexample.repository.UserRepository
+sej/springexample/model/UserRole.java
+ sej.springexample.model.UserRole
+sej/springexample/JPAMain.java
+ sej.springexample.JPAMain
+sej/springexample/repository/SchoolRepository.java
+ sej.springexample.repository.SchoolRepository
+sej/springexample/repository/StudentRepository.java
+ sej.springexample.repository.StudentRepository
+sej/springexample/model/Student.java
+ sej.springexample.model.Student
+sej/springexample/service/SchoolService.java
+ sej.springexample.service.SchoolService
+ sej.springexample.service.SchoolService$1
+sej/springexample/ManyToOneRun.java
+ sej.springexample.ManyToOneRun
+sej/springexample/model/School.java
+ sej.springexample.model.School
+sej/springexample/OneToManyRun.java
+ sej.springexample.OneToManyRun

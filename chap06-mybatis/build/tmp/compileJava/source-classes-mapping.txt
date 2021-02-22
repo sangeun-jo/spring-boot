@@ -1,0 +1,6 @@
+sej/springexample/repository/UserRepository.java
+ sej.springexample.repository.UserRepository
+sej/springexample/config/MyBatisConfig.java
+ sej.springexample.config.MyBatisConfig
+sej/springexample/MybatisMain.java
+ sej.springexample.MybatisMain
