@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '1.5.8.RELEASE'
+}
+
+ext {
+    springBootVersion='1.5.8.RELEASE'
+}
+
+bootRepackage.enabled = false
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: '1.5.8.RELEASE'
+    compile 'org.slf4j:slf4j-api:1.7.21'
+}
+
+jar {
+    baseName='spring-boot-helloService-starter'
+    version='1.0.0-SNAPSHOT'
+}
