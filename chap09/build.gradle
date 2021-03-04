@@ -3,23 +3,32 @@ plugins {
     id 'org.springframework.boot' version '1.5.8.RELEASE'
 }
 
-
-//bootRepackage.enabled = false
-
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-/*
+
 springBoot {
     executable = true
 }
-
- */
 
 repositories {
     jcenter()
 }
 
+jar {
+    baseName = 'sej-springBoot'
+    version =  '0.1.0'
+}
+
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
+
+    //db
+    runtime  group: 'com.h2database', name: 'h2', version: '1.4.193'
+    compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '1.5.7'
+    compile group: 'com.zaxxer', name: 'HikariCP', version: '2.5.1'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
+
     testCompile 'org.springframework.boot:spring-boot-starter-test'
+    //testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    //testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
