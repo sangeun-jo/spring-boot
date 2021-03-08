@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '1.5.8.RELEASE'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-security'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '1.5.8.RELEASE'
+}
