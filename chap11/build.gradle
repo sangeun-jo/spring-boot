@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '1.5.8.RELEASE'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+
+    compile("org.springframework.boot:spring-boot-starter-web") {
+        exclude group: "org.springframework.boot", module: "spring-boot-starter-tomcat"
+    }
+    compile ("org.springframework.boot:spring-boot-starter-undertow") {
+        exclude group: "io.undertow", module: "undertow-websockets-jsr"
+    }
+
+    compile group: 'org.ehcache', name: 'jcache', version: '1.0.1'
+    compile group: 'javax.cache', name: 'cache-api', version: '1.0.0'
+    
+    //compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.sl4j:slf4j-api:1.7.7'
+
+
+}
